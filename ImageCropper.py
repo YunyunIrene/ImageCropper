@@ -18,7 +18,7 @@ from math import sqrt, atan2, degrees
 
 class ImageCropper(Gtk.Window):
     def __init__(self):
-        super().__init__(title="Picture Cutter v1.0")
+        super().__init__(title="ImageCropper v1.0")
         
         # 初始化变量
         self.original_image = None
@@ -1173,7 +1173,7 @@ class ImageCropper(Gtk.Window):
         if self.original_image:
             # 旋转图像
             self.display_image = self.original_image.rotate(
-                self.rotation, expand=True, resample=Image.Resampling.BICUBIC)
+                self.rotation, expand=True, resample=Image.BICUBIC)
             
             # 调整裁剪框（如果有）
             if self.crop_rect:
